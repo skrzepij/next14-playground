@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { Theme } from '@radix-ui/themes';
+import {Box, Theme} from '@radix-ui/themes';
 import '@radix-ui/themes/styles.css';
 import './globals.css';
 
@@ -16,7 +16,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <Theme>{children}</Theme>
+        <Theme accentColor="crimson" grayColor="sand" radius="large">
+          <Box p="5">
+          {children}
+          </Box>
+        </Theme>
       </body>
     </html>
   );
