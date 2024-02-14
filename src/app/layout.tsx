@@ -1,9 +1,10 @@
+import '../styles/global.scss';
+
 import type {Metadata} from 'next';
+import React from "react";
 import {Box, Theme} from '@radix-ui/themes';
 
-import './globals.scss';
 import {Navbar} from "@/components/Navbar/Navbar";
-import React from "react";
 
 export const metadata: Metadata = {
   title: 'Create Next App',
