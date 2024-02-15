@@ -1,7 +1,10 @@
-import type { Metadata } from 'next';
+import '../styles/global.scss';
+
+import type {Metadata} from 'next';
+import React from "react";
 import {Box, Theme} from '@radix-ui/themes';
-import '@radix-ui/themes/styles.css';
-import './globals.css';
+
+import {Navbar} from "@/components/Navbar/Navbar";
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -12,16 +15,17 @@ export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
-}>) {
+}>): JSX.Element {
   return (
     <html lang="en">
-      <body>
-        <Theme accentColor="crimson" grayColor="sand" radius="large">
-          <Box p="5">
-          {children}
-          </Box>
-        </Theme>
-      </body>
+    <body>
+    <Theme accentColor="crimson" grayColor="sand" radius="large">
+      <Navbar/>
+      <Box p="5">
+        {children}
+      </Box>
+    </Theme>
+    </body>
     </html>
   );
 }
