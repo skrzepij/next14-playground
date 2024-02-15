@@ -14,7 +14,9 @@ const Characters = async () => {
             const { images: imageSrc } = char;
 
             // imageSrc[0] --> i know, it hurts me as well, but i dunno how to nicely destruct this shit cause its an array with couple of img urls where the first one seems to be valid, but i will prepare some exception like if there's no any pic some middleware will come out with a default image (404 not found) 🎉
-            return <CharacterCard imageSrc={imageSrc[0]} name={name} />;
+            return (
+              <CharacterCard imageSrc={imageSrc[0]} name={name} key={char.id} />
+            );
           })}
         </Flex>
       </Container>
