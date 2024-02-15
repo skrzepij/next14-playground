@@ -1,4 +1,4 @@
-import { CharacterCard } from '../../../components/CharactersGallery/CharactersCard';
+import { CharacterCard } from '../../components/CharactersGallery/CharactersCard';
 import { Box, Container, Flex } from '@radix-ui/themes';
 
 const Characters = async () => {
