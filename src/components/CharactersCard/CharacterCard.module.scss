@@ -1,0 +1,22 @@
+.card {
+  /* ten kolor wchodzi */
+  @apply w-[200px] bg-red-800;
+
+  /* ale ten juz nie, why? wtf */
+  /* @apply bg-slate-100; */
+  /* nie da sie wyjebac paddingu nawet z importantem, fajny ten radix */
+  padding: 0 !important;
+
+  &:hover {
+    /* hover wchodzi, ale tez nie jest to zdefiniownany kolor */
+    @apply bg-slate-100 cursor-pointer;
+  }
+}
+
+.inset {
+  @apply relative w-full h-[150px];
+}
+
+.image {
+  @apply object-fill;
+}

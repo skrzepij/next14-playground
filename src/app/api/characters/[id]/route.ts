@@ -9,7 +9,7 @@ interface CustomResponse extends Response {
 export const GET = async (_: Request, res: CustomResponse) => {
   const { id } = res.params;
 
-  const response = await fetch(`https://narutodb.xyz/api/character/${id}`);
+  const response = await fetch(`${process.env.NARUTO_DOMAIN}/character/${id}`);
   const data = await response.json();
 
   return NextResponse.json({ data }, { status: 200 });

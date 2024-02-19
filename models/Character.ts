@@ -1,5 +1,5 @@
 type Character = {
-  id: number;
+  id: string;
   name: string;
   images: string[];
   debut: {
