@@ -1,12 +1,10 @@
-import { CharacterCard } from '../../components/CharactersCard/CharacterCard';
-import { Box, Container, Flex } from '@radix-ui/themes';
+import { CharacterCard } from "../../components/CharactersCard/CharacterCard";
+import { Box, Container, Flex } from "@radix-ui/themes";
 
 const Characters = async () => {
-  const response = await fetch('http://localhost:3000/api/characters');
-
-  const {
-    data: { characters },
-  } = await response.json();
+  const response = await fetch(`${process.env.NARUTO_DOMAIN}/character`);
+  const data = await response.json();
+  const { characters } = data;
 
   return (
     <Box>

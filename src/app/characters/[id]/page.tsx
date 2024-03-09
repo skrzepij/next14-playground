@@ -5,7 +5,7 @@ type QueryParams = {
 const CharacterOverview = async ({ params }: { params: QueryParams }) => {
   const id = params.id;
 
-  const response = await fetch(`http://localhost:3000/api/characters/${id}`);
+  const response = await fetch(`${process.env.NARUTO_DOMAIN}/character/${id}`);
 
   const data = await response.json();
 
